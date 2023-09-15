@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div > .main {
+            background-color: linen;
+        }
+
+        body.main {
+            background-color: azure;
+        }
+
+        div strong {
+            color: dodgerblue;
+        }
+
+        ol, ul {
+            color: green;
+        }
+
+        li:hover {
+            background-color: yellowgreen;
+        }
+
+        tr:hover {
+            background-color: linen;
+        }
+
+        tr:nth-child(even) {
+            background-color: white;
+        }
+
+        tr:nth-child(odd) {
+            background-color: green;
+        }
+
+    </style>
 </head>
-<body>
+<body class="main">
     이번 시간에 배우는 내용 <br>
     Git
     HTML
@@ -14,18 +48,22 @@
 
     <!-- list -->
     <!-- 알아서 번호를 붙여줌 ordered list -->
-    <ol>
+    <ol class="main">
         <li>Git</li>
         <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
+        <div>
+        <li><strong>CSS</strong></li>
+        </div>
+        <li>JavaScript</li> 
     </ol>
 
-    <ul>
+    <ul class="main">
         <li>과목 점수</li>
         <li>Git 90</li>
         <li>HTML 100</li>
-        <li>CSS 80</li>
+        <div>
+        <li><strong>CSS 80</strong></li>
+        </div>
         <li>JavaScript 70</li>
     </ul>
 
