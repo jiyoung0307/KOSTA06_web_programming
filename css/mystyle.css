@@ -1,0 +1,35 @@
+div > .main {
+    background-color: linen;
+}
+
+body.main {
+    background-color: azure;
+}
+
+div strong {
+    color: dodgerblue;
+}
+
+ol, ul {
+    color : green;
+    border-width :1px 2px 3px 4px ;
+    border-style : solid;
+    border-color: blue;
+    /* border-color:blue; */
+}
+
+li:hover {
+    background-color: yellowgreen;
+}
+
+tr:hover {
+    background-color: linen;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: green;
+}
