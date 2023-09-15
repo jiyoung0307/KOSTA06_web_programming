@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 정보 입력</title>
+</head>
+<body>
+    <h1>학생 정보 입력</h1>
+    <form action="none" method="get">
+        <p>
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+        </p>
+        <p>
+            <label>성별</label>
+            <input type="radio" id="male" name="gender" value="M">
+            <label for="male">남성</label>
+            <input type="radio" id="female" name="gender" value="F">
+            <label for="female">여성</label>
+        </p>
+        <p>
+            <label for="age">나이</label>
+            <input type="number" id="age" name="age" value = 0 min="0" max="120" required>
+        </p>
+        <p>
+            <label for="phone">전화번호</label>
+            <input type="tel" id="phone" name="phone" 
+            pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+            placeholder="000-0000-0000">
+        </p>
+        <p>
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email"
+            placeholder="a@b.com" >
+        </p>
+        <p>
+            <label>관심언어(중복체크 가능)</label><br>
+            <input type="checkbox" name="language1" id="language1" value="1">
+            <label for="language1">자바</label><br>
+            <input type="checkbox" name="language1" id="language1" value="2">
+            <label for="language1">자바스크립트</label><br>
+            <input type="checkbox" name="language1" id="language1" value="3">
+            <label for="language1">C</label><br>
+            <input type="checkbox" name="language1" id="language1" value="4">
+            <label for="language1">파이썬</label><br>
+            <input type="checkbox" name="language1" id="language1" value="5">
+            <label for="language1">nodejs</label><br>
+            <input type="checkbox" name="language1" id="language1" value="6">
+            <label for="language1">C++</label>
+        </p>
+        <p>
+            <label for="fav-food">좋아하는 음식 종류 하나만 선택해주세요</label>
+            <select name="fav-food" id="fav-food">
+                <option value="1">한식</option>
+                <option value="2">중식</option>
+                <option value="3">양식</option>
+                <option value="4">일식</option>
+            </select>
+        </p>
+        <!-- http://127.0.0.1:5500/none?name=&gender=F&age=&phone=&email=&language1=4&fav-food=2 -->
+        <input type="submit" value="작성">
+    </form>
+
+
+    <br><br><br>
+            <!-- 수행과제 3) 학생 정보 입력 받는 양식 작성하기 (label 이용)
+            1. 이름 text
+            2. 성별
+            3. 나이 
+            4. 전화번호
+            5. 이메일
+            6. 관심언어(중복체크 가능)
+            7. 좋아하는 음식(하나만 선택 - select) -->
+            <br><br>
+            <h1>학생 정보 입력</h1>
+            <hr>
+            <label for="name">이름 : <input type="text" name="name" id="name" required></label><br>
+            <label for="M/F"> 성별 </label><br>
+            <input type="radio" id="male" name="성별" value="M">
+            <label for="male">남성</label><br>
+            <input type="radio" id="female" name="성별" value="F">
+            <label for="female">여성</label><br>
+            <label for="name">나이 : <input type="number" name="age" id="age"></label><br>
+            <label for="phone">전화번호 : <input type="tel" name="phone" id="phone"></label><br>
+
+            <label for="email">이메일 : <input type="email" name="email" id="email"></label><br>
+
+            <label for="관심언어">관심언어 : </label><br>
+            <input type="checkbox" id="Java" name="Java" value="Java">
+            <label for="Java">Java</label><br>
+            <input type="checkbox" id="Python" name="Python" value="Python">
+            <label for="Python">Python</label><br>
+            <input type="checkbox" id="MySQL" name="MySQL" value="MySQL">
+            <label for="MySQL">MySQL</label><br>
+            <input type="checkbox" name="HTML" id="HTML"value="HTML">
+            <label for="HTML">HTML</label><br>
+            <input type="checkbox" name="CSS" id="CSS"value="CSS">
+            <label for="CSS">CSS</label><br>1
+            <input type="checkbox" name="JavaScript" id="JavaScript"value="JavaScript">
+            <label for="JavaScript">JavaScript</label><br>
+            <label for="food">좋아하는 음식 :</label>
+            <select id="food" name="food">
+                <option value="1">한식</option>
+                <option value="2">일식</option>
+                <option value="3">양식</option> 
+                <option value="4">중식</option>
+            </select><br><br>
+            <input type="submit" value="제출">
+        </p>
+    </form>
+</body>
+</html>
