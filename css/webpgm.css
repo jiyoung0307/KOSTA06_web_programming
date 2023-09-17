@@ -1,0 +1,25 @@
+nav {
+    float : left;
+    width : 100px;
+    height : 600px;
+    border-right : 1px solid red;
+    padding : 10px;
+}
+h1 {
+    border-bottom : 1px solid red;
+    padding-bottom : 20px;
+    margin-bottom:0px;
+}
+header {
+    width:100%;
+    margin-bottom:0px;
+}
+main{
+    width:1200px;
+    margin:0px auto;
+}
+section {
+    width : 1000px;
+    height : 600px;
+    padding : 10px;
+}

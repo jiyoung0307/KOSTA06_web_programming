@@ -26,10 +26,19 @@ tr:hover {
     background-color: linen;
 }
 
-tr:nth-child(even) {
+/* tr:nth-child(even) {
     background-color: white;
-}
+} */
 
 tr:nth-child(odd) {
     background-color: green;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid blue;
+}
+
+th,td {
+    border: 1px dotted green;
 }
