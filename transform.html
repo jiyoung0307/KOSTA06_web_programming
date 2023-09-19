@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            color: white;
+            background-color: gray;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        div#pers {
+            perspective: 300px;
+        }
+        .r:hover {
+            transform: rotateX(50deg);
+        }
+
+        div#s {
+            transform: skew(20deg, -20deg);
+        }
+
+        div#sc {
+            transform: scale(1, 3);
+        }
+
+        div#t {
+            transform: translateY(100px);
+        }
+
+        div#t:hover {
+            transform: translate(50px, 100px);
+        }
+    </style>
+</head>
+<body>
+        <div class="r">
+            <img src="images/제주도.jpg" width="100px" height="60px" alt=""></div>
+
+            <div class="r" id="pers">
+                <img src="images/제주도.jpg" width="100px" height="60px" alt=""></div>
+        <div id="s">skew</div>
+        <div id="sc">scale</div>
+        <div id="t">translate</div>
+</body>
+</html>

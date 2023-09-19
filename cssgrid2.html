@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>템플릿 영역</title>
+    <style>
+        #wrapper {
+            color: white;
+            text-align: center;
+            /* width: 700px; */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 100px);
+
+            grid-template-areas: 
+            "box1 box1 box1"
+            "box2 box3 box3"
+            "box2 . box4";
+        }
+
+        .box1 {
+            background-color: blue;
+            grid-area: box1;
+        }
+
+        .box2 {
+            background-color: green;
+            grid-area: box2;
+        }
+
+        .box3 {
+            background-color: orangered;
+            grid-area: box3;
+        }
+
+        .box4 {
+            background-color: orange;
+            grid-area: box4;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 그리드 레이아웃 배치 실습</title>
+    <style>
+        #wrapper {
+            /* width: 700px; */
+            background-color: white;
+            border: 1px black solid;
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr) ; */
+            /* grid-template-columns: repeat(auto-fit, 200px) ; */
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) ;
+            /* grid-template-rows: 2fr 1fr; */
+            grid-template-rows: minmax(50px, auto);
+        }
+        .items:nth-child(odd) {
+            background-color: gray;
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- div.box*3 -->
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="items">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="items">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            animation: ani1 2s infinite;
+            /* animation: text1 4s infinite; */
+        }
+        p {
+            transition: font-size 2s;
+        }
+
+        p:hover {
+            font-size: 500%;
+        }
+
+        @keyframes ani1{
+            0% { background-color: blue; }
+            50% {background-color: green; }
+            100% {background-color: red;}
+        }
+
+        @keyframes text1 {
+            0% { color: white; }
+            50% { color: yellow; }
+            100%{ color: violet; }
+        }
+    </style>
+</head>
+<body>
+    <div>animation</div>
+    <p>꽝!</p>
+</body>
+</html>
