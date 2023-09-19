@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백 함수</title>
+    <script>
+        function callTenTimes(callback) {
+            for(var i = 0; i < 10; i++) {
+            callback();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>콜백함수</h3>
+    <h4>: 함수의 매개 변수로 전달되는 함수</h4>
+    <hr>
+    <script>
+        // 함수를 매개변수로 전달
+        callTenTimes(() => document.write("콜백함수 호출 <br>"));
+    </script>
+</body>
+</html>

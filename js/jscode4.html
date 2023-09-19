@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x;          // 전역변수
+        function f1() {
+            var x;  //지역변수
+            x = 1;
+            console.log("지역변수 x = ", x);
+            this.x = 100;   // 전역변수
+        }
+
+        function f() {
+            // var y;      // 지역변수
+            console.log("x = ", x);
+            x = 10;
+            // console.log(x);
+            console.log("y = ", y);
+            var y = 10;
+            z = 10;     // 전역변수
+        }
+
+        f1();
+        // f();
+        console.log("전역변수 x = ", x);
+        // console.log("y ", y);
+        console.log("z = ", z);
+    </script>
+</body>
+</html>

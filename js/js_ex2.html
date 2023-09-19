@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>whilte 문으로 1~입력받은 수까지 더하기</h3>
+    <hr>
+    <script>
+        // 취소로 입력하지 않은 경우 처리 
+        // 문자를 입력한 경우 처리
+        // 숫자를 입력하면 숫자로 변환한 후 더하기
+        // 더한 후 결과는 document.write 로 출력하기
+        var input = prompt("숫자를 입력하세요.", 0);
+        var num;
+        if(input == null) {
+            document.write("입력값이 없습니다.");
+        } else {
+            num = parseInt(input);
+            if (num == NaN) {
+                document.write("입력값이 숫자가 아닙니다.");
+            } else {
+                var i = 0 , sum = 0;
+                while(i <= num) {
+                    sum += i;
+                    i++;
+                }
+                document.write("1에서 "+ n + "까지의 합은 " + sum + "입니다.");
+            }
+        }
+
+    </script>
+</body>
+</html>

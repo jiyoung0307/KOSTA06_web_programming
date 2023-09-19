@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout과 setInterval 예제</title>
+</head>
+<body>
+    <h3>setTimeout & setInterval</h3>
+    <h4>ms가 기준이므로 1초에 1000<br> 3초 = 3000ms</h4>
+    <hr>
+    <script>
+        setTimeout(function () {
+            console.log("3초가 지났습니다.");
+        }, 3000);
+
+        setInterval(function () {
+            console.log("1초마다 호출됩니다.")
+        }, 1000);
+    </script>
+</body>
+</html>
