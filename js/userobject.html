@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 객체 만들기</title>
+</head>
+<body>
+    <h3>new Object()로 사용자 객체 만들기</h3>
+    <hr>
+    <script>
+        let inquiry = function () {
+            console.log("계좌잔액 조회");
+        }
+
+        let withdraw = function() {
+            console.log("출금");            
+        }
+
+        let deposit = function() {
+            console.log("입금");            
+        }
+
+        // new Object로 객체 만들기
+        // let account = new Object();
+        // account.code = "111";
+        // account.owner = "홍길동";
+        // account.balance = 35000;
+        // account.inquiry = inquiry;
+        // account.withdraw = withdraw;
+        // account.deposit = deposit;
+
+        // 리터럴로 사용자 객체 만들기(json)
+         let account = {
+            code : "1111",
+            owner : "홍길동",
+            balance : 35000,
+            inquiry : function () {
+                return "계좌잔액";
+            }
+         }
+
+        document.write(account.owner + "의 계좌 <br>");
+        document.write("잔액 : " + account.inquiry());
+    </script>
+    
+</body>
+</html>
