@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수행과제 3</title>
+</head>
+<body>
+    <h3>수행과제 3</h3>
+    <h4>정확한 암호가 입력될 때까지 계속 prompt( )를 출력하여 암호를 입력받는 웹 페이지를 작성하라.<br>
+        암호는 you이다. you가 입력되면 오른쪽과 같이 출력된다.</h4>
+    <hr>
+    <script>
+        while(true) {
+            var input = prompt("암호를 입력하세요.");
+            if(input == null) {
+                continue;
+            } else if(input == "you") {
+                document.write("통과!");
+                break;
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math 예제</title>
+    <script>
+        function randInt() {
+            let number;
+            number = Math.ceil(Math.random() * 9);
+            return number;
+        }
+    </script>
+</head>
+<body>
+    <h3>구구단 연습하기</h3>
+    <hr>
+    <script>
+        // for(let i=0; i <30; i++) {
+        //     console.log(randInt());
+        // }
+        let x = randInt();
+        let y = randInt();
+        let answer = x * y;
+        let str = x + "*" + y + "의 값은 얼마입니까?";
+        let result = prompt(str);
+        if(result != null && !isNaN(result)) {
+            result = parseInt(result);
+            if(result == answer) {
+                document.write("정답입니다!");
+            } else {
+                document.write("다시 생각해보세요.")
+            }
+        } else {
+            document.write("숫자를 정확하게 입력하세요.");
+        }
+    </script>
+    
+</body>
+</html>
