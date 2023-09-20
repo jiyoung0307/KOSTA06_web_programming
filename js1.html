@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자바스크립트 기초</title>
     <script src="js/jscode1.js">
+        // obj는 전달받은 img 태그를 가리킴
         // function over(obj) {
         //     obj.src = 'images/King_heart.jpg';
         // }
@@ -19,6 +20,7 @@
     onmouseover="this.src='images/King_heart.jpg'"
     onmouseout="this.src='images/card back.jpg'"> -->
     <!-- 매개변수로 함수를 넘겨주는 방법 -->
+    <!-- this는 현재 img 태그를 가리키는 자바스크립트 키워드 -->
     <img src="images/card back.jpg" alt="img"
     onmouseover="over(this)"
     onmouseout="out(this)">
