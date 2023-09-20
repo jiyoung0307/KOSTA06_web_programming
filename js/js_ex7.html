@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>주문자 정보 입력</title>
+    <script>
+        function init() {
+            let cb = document.getElementById("checkbox");
+            cb.addEventListener("click", equal);
+        }
+
+        function equal() {
+            let cb = document.getElementById("checkbox"); // 변수 다시 선언
+            if (cb.checked == true) {
+                let Name = document.form.ordername.value;
+                let Address = document.form.orderaddress.value;
+                let Phone = document.form.orderphone.value;
+
+                document.form.shipname.value = Name; // .value 추가
+                document.form.shipaddress.value = Address; // .value 추가
+                document.form.shipphone.value = Phone; // .value 추가
+            } else {
+                document.form.shipname.value = "";
+                document.form.shipaddress.value = "";
+                document.form.shipphone.value = "";
+            }
+        }
+        
+    </script>
+</head>
+<body onload="init()">
+    <h1>주문자 정보</h1>
+    <form name="form">
+        <label for="name">이름 : </label>
+        <input type="text" id="name" name="ordername">
+        <br>
+        <label for="addres">주소 : </label>
+        <input type="text" id="address" name="orderaddress">
+        <br>
+        <label for="phone">전화번호 : </label>
+        <input type="text" id="phone" name="orderphone">
+        <br>
+        <br>
+        <input type="checkbox" name="checkbox" id="checkbox"> 주문자의 정보와 동일합니다.
+    
+    <h2>주문자 정보 확인</h2>
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="shipname">
+        <br>
+        <label for="address">이메일:</label>
+        <input type="text" id="address" name="shipaddress">
+        <br>
+        <label for="phone">전화번호:</label>
+        <input type="text" id="phone" name="shipphone">
+        <br>
+    </form>
+</body>
+</html>
+

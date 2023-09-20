@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체</title>
+    <script>
+        function f(e){
+            alert(`${e.type} + ${e.target} + ${e.currentTarget} + ${e.defaultPrevented}`)
+        }
+    </script>
+</head>
+<body onload = "init()">
+    <h1>이벤트 객체</h1>
+    <h3>예제 9-6 이벤트 객체의 프로퍼티 출력</h3>
+    <hr>
+    <div id="div">마우스를 올려보세요</div>
+    <button id="button">클릭하세요</button>
+    <script>
+        document.getElementById("div").onmouseover = f;
+        document.getElementById("button").onclick = f;
+    </script>
+
+</body>
+</html>

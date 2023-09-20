@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener() 사용</title>
+    <script>
+        var div;        // 전역변수 선언
+        function init(){
+            div = document.querySelector("#event");
+            div.addEventListener("mouseover", over);
+            div.addEventListener("mouseout", out);         
+        }
+
+        function over(){
+            div.style.backgroundColor = "green";
+            div.style.color = "white";
+        }
+        
+        function out(){
+            div.style.backgroundColor = "white";
+            div.style.color = "black";
+        }
+
+    </script>
+</head>
+<!-- 로딩이 다되고 나면 실행하는 것이기 때문에 스크립트가 위에 위치해있어도 상관없다. -->
+<body onload = "init()">
+    <h1>이벤트 리스너</h1>
+    <hr>
+    <div id="event">
+        <!-- onmouseover = "this.style.backgroundColor = 'orchid'"
+        onmouseout = "this.style.backgroundColor = 'white'"> -->
+        마우스를 올리면 orchid 색으로 변경
+    </div>
+
+</body>
+</html>
