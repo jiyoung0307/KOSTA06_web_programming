@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let students = [ {
+            name : "홍길동",
+            score : 90
+        }, {
+            name : "김연아",
+            score : 100
+        }];
+
+        for(const student of students) {
+            for(const key in student){
+                console.log(`학생의 ${key} : ${student[key]}`);
+            }
+            //console.log(`학생의 이름 : ${student.name}, 성적 : ${student.score}`);
+        }
+
+        let array = [1,2,3,4,5];
+        
+        array.forEach((item, index) => console.log(`index = ${index}, item = ${item}`));
+
+        let outputMap = array.map((item) => {
+            return item * item;
+        });
+
+        outputMap.forEach((item, index) => console.log(`index = ${index}, item = ${item}`));
+
+        let outputFilter = array.filter((item) => {
+            return item % 2 == 1;
+        });
+
+        for(const output of outputFilter) {
+            console.log(`${output}`);
+        }
+
+    </script>
+</body>
+</html>

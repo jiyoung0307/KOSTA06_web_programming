@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML 변경하기</title>
+    <script>
+        // span태그를 클릭하면 innerHTML 을 img 태그로 변경하기
+        function change() {
+            const p = document.querySelector("p");
+            p.innerHTML = "<img src='images/bg5.jpg'>";
+        }
+    </script>
+</head>
+<body>
+    <h3>innerHTML 변경하기</h3>
+    <hr>
+    <p id="firstP"
+       style="color: blue;"
+       onclick="this.style.backgroundColor = 'white'"
+       >
+        여기를
+        <span style="color: red;" onclick="change()">
+        클릭하세요.
+        </span>
+    </p>
+</body>
+</html>

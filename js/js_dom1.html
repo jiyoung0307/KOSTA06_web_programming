@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 스타일 동적 변경</title>
+    <script>
+        // 버튼을 클릭하면 span 태그의 글자 크기를 30px로, 
+        // 테두리를 3px, dotted, magenta로
+        // 디스플레이를 블록레벨로 변경하기
+        function change() {
+            const span = document.querySelector("span");
+            span.style.fontSize = "30px";
+            span.style.border = "3px dotted magenta";
+            span.style.display = "block";
+            span.style.margin = "10px";
+            span.style.padding = "5px";
+        }
+    </script>
+</head>
+<body>
+    <h3>CSS 스타일 동적 변경</h3>
+    <hr>
+    <p id="firstP"
+       style="color: blue; background-color: yellow;"
+       onclick="this.style.backgroundColor = 'white'">
+        이것은
+        <span style="color: red;">
+        문장입니다.
+        </span>
+    </p>
+    <input type="button" value="스타일변경" onclick="change()">
+    <!-- <button>스타일변경</button> -->
+    <script>
+
+    </script>
+</body>
+</html>
