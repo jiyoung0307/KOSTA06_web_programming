@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onsubmit 관련 이벤트 리스너</title>
+    <script>
+        function login() {
+            let name = document.form.name.value;
+            alert(`${name} 님 반갑습니다.`)
+            return false;       // 이벤트의 디폴트 행동 취소
+        }
+    </script>
+</head>
+<body>
+    <h1>onsubmit 관련 이벤트 리스너</h1>
+    <hr>
+    <form name="form" action="" onsubmit="return login()">
+        이름 <input type="text" name="name" required>
+        학번 <input type="text" name="number" required>
+        <input type="submit" value="클릭">
+    </form>
+</body>
+</html>

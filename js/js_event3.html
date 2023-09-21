@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 리스너로 계산기 만들기</title>
+    <script>
+        function calculate() {
+            let exp = document.getElementById("exp");
+            // document.forms[0].exp.value;
+            let result = document.querySelector("#result");
+            result.value = eval(document.forms[0].exp.value);
+        }
+    </script>
+</head>
+<body>
+    <big>이벤트 리스너로 계산기 만들기</big>
+    <hr>
+    <form action="">
+        <input type="text" name="exp" id="exp">
+        <input type="text" name="result" id="result">
+        <input type="button" value="계산"
+               onclick="calculate()">
+    </form>
+</body>
+</html>

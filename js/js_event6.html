@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 리스너</title>
+    <script>
+        function findChecked() {
+            let city1 = document.getElementsByName("city");
+            let city2 = document.form.city;
+            console.log(city1.length);
+            console.log(city2.length);
+            for(let city of city1) {
+                if(city.checked) {
+                    switch(city.value) {
+                        case '1':
+                        console.log("서울이 선택됨")
+                        case '2':
+                        console.log("부산이 선택됨")
+                        case '3':
+                        console.log("춘천이 선택됨")
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>선택된 라디오버튼 알아내기</h1>
+    <hr>
+    <form name="form" action="">
+        <input type="radio" name="city" value="1" checked>서울
+        <input type="radio" name="city" value="2">부산
+        <input type="radio" name="city" value="3">춘천
+        <input type="button" value="find checked" onclick="findChecked()">
+    </form>
+</body>
+</html>

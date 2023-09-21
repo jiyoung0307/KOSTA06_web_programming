@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 요소의 값 제어하기</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script>
+      function drawImage(e){
+          let cupImage = document.getElementById("cupImage");
+          let imgSrc = "";
+          if(e.target.checked) {
+            switch(e.target.value){
+              case '1' :
+                imgSrc = "../images/cup-1.jpg";
+                break;
+              case '2' :
+                imgSrc = "../images/cup-2.jpg";
+                break;
+              case '3' :
+                imgSrc = "../images/cup-3.jpg";
+                break;
+            }           
+          }
+          cupImage.src = imgSrc;
+      }
+  </script>
+</head>
+<body>
+  <h3>radio 관련 이벤트 리스너</h3>
+  <hr>
+  <form name="form" action="">
+      <input type="radio" name="cup" value="1" checked onclick="drawImage(event)">컵1
+      <input type="radio" name="cup" value="2" onclick="drawImage(event)">컵2
+      <input type="radio" name="cup" value="3" onclick="drawImage(event)">컵3
+  </form>
+  <img id="cupImage" src="../images/cup-1.jpg" alt="">
+</body>
+</html>

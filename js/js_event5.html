@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onfocus 관련 이벤트 리스너</title>
+    <script>
+        function check(obj) {
+            if(obj.value == "") {
+                alert("이름을 반드시 입력해야 합니다.");
+                obj.focus();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>onfocus와 onblur, 입력 없이 다른 창으로 갈 수 없음</h1>
+    <hr>
+    <form action="">
+        이름 <input type="text" id="name"
+                    onblur="check(this)">
+        학번 <input type="text" id="number">
+    </form>
+</body>
+</html>

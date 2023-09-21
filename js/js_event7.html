@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스로 선택한 물품 계산</title>
+    <script>
+        var sum = 0;
+        function calc(obj) {
+            if(obj.checked) {
+                sum += parseInt(obj.value);
+            } else {
+                sum -= parseInt(obj.value);
+            }
+            document.form.total.value = sum;
+        }
+    </script>
+</head>
+<body>
+    <h1>checkbox 관련 이벤트 리스너</h1>
+    <hr>
+    <form name="form" action="">
+        <input type="checkbox" name="cap" value="10000" 
+            onclick="calc(this)">모자 1만원
+        <input type="checkbox" name="shoes" value="30000" 
+            onclick="calc(this)">구두 3만원
+        <input type="checkbox" name="bag" value="80000"
+            onclick="calc(this)" >가방 8만원 <br>
+            
+        지불하실 금액 <input type="text" value="0" name="total" readonly>
+    </form>
+</body>
+</html>
