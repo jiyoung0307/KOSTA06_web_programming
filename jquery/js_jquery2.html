@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery - google CDN 가져오기  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // 모든 요소 숨기기
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("p").hide();
+            });
+        });
+
+        // 모든 요소 보이기
+        $(function () {
+            $("#show").click(function () {
+                $("p").show();
+            });
+        });
+
+        // 짝수번에 있는 요소 노란 배경으로 칠하기
+        $(document).ready(function () {
+            const p = $("p");
+            console.log(p.length);
+            p.each((index, item) => {
+                if (index % 2 == 1) {
+                    $(item).css('backgroundColor', 'yellow');
+                }
+            })
+        });
+
+        // 4번째 요소 글자바꾸기
+        // $(document).ready(function(){
+        //     $("#change").click(function() {
+        //         let lastP = $("p:nth-child(4)")
+        //         console.log($("p:nth-child(4)"))
+        //         // console.log(lastP.text());
+        //         console.log(allP);
+        //         console.log(firstP);
+        //         lastP.text("React");
+        //         // $("p:nth-child(4)").text("React");
+        //     });
+        // });
+
+        // 4번째 요소 글자바꾸기
+        $(document).ready(function () {
+            $("#change").click(function () {
+                let allP = $('p').text();
+                let firstP = $('p').html();     // 가져올때만 첫번째 것 가져옴
+                console.log(allP);
+                console.log(firstP);
+                $('p').html.text("React");
+            });
+        });
+
+        // 배경색과 글씨 변경
+        $(function () {
+            $("#cssChange").click(function () {
+                $('p').css({
+                    'color' : 'blue',
+                    'fontSize' : '30px'
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JavaScript</p>
+        <p>jQuery</p>
+        <button id="hide">숨기기</button>
+        <button id="show">보이기</button>
+        <button id="change">글자 바꾸기</button>
+        <button id="cssChange">배경색과 글씨 변경</button>
+    </div>
+</body>
+
+</html>

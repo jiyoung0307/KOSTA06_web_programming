@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("p").hide();
+            });
+        });
+        $(function () {
+            $("#show").click(function () {
+                $("p").show();
+            });
+        });
+        $(document).ready(function () {
+            const p = $("p");
+            console.log(p.length);
+            p.each((index, item) => {
+                if (index % 2 == 1) {
+                    $(item).css('backgroundColor', 'yellow');
+                }
+            })
+        });
+        $(function () {
+            $("#change").click(function () {
+                //let lastP =  $("p:nth-child(4)");
+                let allP = $('p').text();
+                let firstP = $('p').html(); // 가져올때만 첫번째 것 가져옴
+                console.log(allP);
+                console.log(firstP);
+                //$('p').text('React');
+                $('p').html('React'); // 변경시에는 전부 적용
+                //lastP.text("React");
+            });
+        });
+
+        $(function () {
+            $("#cssChange").click(function () {
+                $('p').css({
+                    'color' : 'blue',
+                    'fontSize' : '30px'
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JAVASCRIPT</p>
+        <p>jQuery</p>
+        <button id="hide">숨기기</button>
+        <button id="show">보이기</button>
+        <button id="change">글자 바꾸기</button>
+        <button id="cssChange">글씨 변경</button>
+    </div>
+</body>
+
+</html>

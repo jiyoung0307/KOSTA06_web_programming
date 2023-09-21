@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery - google CDN 가져오기  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // 모든 요소 숨기기
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("p").hide();
+            });
+        });
+
+        // 모든 요소 보이기
+        $(document).ready(function () {
+            $("#show").click(function () {
+                $("p").show();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JavaScript</p>
+        <button id="hide">숨기기</button>
+        <button id="show">보이기</button>
+    </div>
+</body>
+
+</html>
