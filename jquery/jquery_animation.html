@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        div {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin: 30px;
+            opacity: 0.1;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('button').click(function(){
+                $('#first').animate({
+                    left : 300,
+                    opacity : 1
+                }, 1000, 'swing');
+
+                $('#second').animate({
+                    left : 300,
+                    opacity : 1
+                }, 1000, 'linear');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button>애니메이션 - 이동</button>
+    <hr>
+    <div id="first"></div>
+    <div id="second"></div>
+</body>
+
+</html>
